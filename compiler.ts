@@ -17,13 +17,8 @@ export function processNode(tc: ts.TypeChecker) {
             tt,
             n,
             ts.TypeFormatFlags.NoTruncation
-            //ts.TypeFormatFlags.None
-            | ts.TypeFormatFlags.AddUndefined
-             | ts.TypeFormatFlags.NoTypeReduction
-               // | ts.TypeFormatFlags.MultilineObjectLiterals
-               | ts.TypeFormatFlags.InTypeAlias
-              //| ts.TypeFormatFlags.UseAliasDefinedOutsideCurrentScope // prevents import(*)
-              | ts.TypeFormatFlags.UseStructuralFallback
+            | ts.TypeFormatFlags.InTypeAlias
+            | ts.TypeFormatFlags.UseAliasDefinedOutsideCurrentScope // prevents import(*)
           )
           const str = typeDecl
           result[method] = str
