@@ -31,7 +31,7 @@ export function processNode(tc: ts.TypeChecker) {
       })
 
       if (!result.parsed) {
-        throw new Error("No parsed result")
+        return
       }
 
       return [
